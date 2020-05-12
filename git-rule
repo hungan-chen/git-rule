@@ -1,0 +1,78 @@
+# git rule 
+
+1.用一个空行隔开标题和正文
+2.限制标题字数在 50 个字符内
+3.用大写字母写标题行
+4.不要用句号结束标题行
+5.在标题行使用祈使语气
+6.正文在 72 个字符处换行
+7.使用正文解释是什么和为什么，而不是如何做
+
+# 在 Angular 的代码提交规范中，一条完整的提交信息分为 header、body、footer 三部分
+########################################################################
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+<footer>
+
+########################################################################
+fix(用户模块): 修复登录接口npe异常
+
+原因：登录接口查找不到用户时报npe异常
+解决方案：增加 if null 判断，当用户不存在时返回提示信息，内容：用户不存在
+
+Fixes https://zentao.hxy.com/zentao/bug-view-123.html
+
+########################################################################
+header 的作用就是规范第一行的内容，使我们在浏览 git log 的时候，能一眼就看出每次 commit 的内容
+
+########################################################################
+type 用于说明本次 commit 的类型，必须是以下枚举值：
+
+feat: 提交新功能，feature 的缩写
+fix: 修复bug
+docs: 文档改动
+style: 不涉及代码逻辑的改动，如增加空格、代码格式化、增加分号等
+refactor: 对原有代码进行重构，即不增加新功能，又不修复 bug
+perf: 改进代码性能的修改，performance 的缩写
+test: 增加/修改现有测试用例
+chore: 对构建过程、辅助工具或依赖库的更改
+
+########################################################################
+scope 指代码提交影响范围，
+如 控制层、业务层、数据层 等，
+也可以按业务划分，视项目不同而不同，
+当提交影响了多个范围，可以使用 * 号代替 ，
+如果觉得不知道怎么区分范围，可以省略，因为 scope 是一个可选项
+
+########################################################################
+subject
+subject 是 commit 目的的简短说明，一般不超过 50 个字
+########################################################################
+
+
+# new project 
+# create github repository 
+https://github.com/hungan-chen/ksh-rule.git
+
+# clone
+cd /code
+git clone https://github.com/hungan-chen/ksh-rule.git
+
+
+
+
+git pull https://github.com/hungan-chen/Demo.git
+git clone https://github.com/hungan-chen/calculate_directory_info.git
+
+git pull https://github.com/hungan-chen/calculate-directory-info.git  .
+
+
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
+  git config --global user.email "hungan.chen@aliyun.com"
+  git config --global user.name "hungan@$(hostname)"
